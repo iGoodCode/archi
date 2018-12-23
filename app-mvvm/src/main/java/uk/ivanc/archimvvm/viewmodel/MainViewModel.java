@@ -72,6 +72,7 @@ public class MainViewModel implements ViewModel {
         return false;
     }
 
+//    按钮 点击后执行
     public void onClickSearch(View view) {
         loadGithubRepos(editTextUsernameValue);
     }

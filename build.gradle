@@ -2,22 +2,26 @@ apply from: 'dependencies.gradle'
 
 buildscript {
     repositories {
+        maven { url "https://maven.google.com" }
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
 
 allprojects {
     repositories {
+        maven { url "https://maven.google.com" }
         jcenter()
+        google()
     }
 }
 
 ext {
-    androidCompileSdkVersion = 25
-    androidBuildToolsVersion = '25.0.2'
+    androidCompileSdkVersion = 28
+    androidBuildToolsVersion = '28.0.3'
     androidMinSdkVersion = 16
-    androidTargetSdkVersion = 25
+    androidTargetSdkVersion = 26
 }

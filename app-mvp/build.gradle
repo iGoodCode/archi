@@ -10,6 +10,8 @@ android {
         targetSdkVersion rootProject.ext.androidTargetSdkVersion
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled = true
     }
     buildTypes {
         release {
@@ -17,22 +19,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     Map<String, String> dependencies = rootProject.ext.dependencies;
 
-    compile dependencies.appCompat
-    compile dependencies.cardView
-    compile dependencies.recyclerView
-    compile dependencies.retrofit
-    compile dependencies.retrofitConverterGson
-    compile dependencies.retrofitAdapterRxJava
-    compile dependencies.picasso
-    compile dependencies.rxAndroid
-    compile dependencies.circleImageView
+    implementation dependencies.appCompat
+    implementation dependencies.cardView
+    implementation dependencies.recyclerView
+    implementation dependencies.retrofit
+    implementation dependencies.retrofitConverterGson
+    implementation dependencies.retrofitAdapterRxJava
+    implementation dependencies.picasso
+    implementation dependencies.rxAndroid
+    implementation dependencies.circleImageView
 
-    testCompile dependencies.jUnit
-    testCompile dependencies.mockito
-    testCompile dependencies.robolectric
+    implementation dependencies.jUnit
+    implementation dependencies.mockito
+    implementation dependencies.robolectric
+//    implementation  dependencies.lifecycle
 }

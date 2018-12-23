@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements MainViewModel.Dat
     @Override
     public void onRepositoriesChanged(List<Repository> repositories) {
         RepositoryAdapter adapter =
-                (RepositoryAdapter) binding.reposRecyclerView.getAdapter();
+                 (RepositoryAdapter) binding.reposRecyclerView.getAdapter();
         adapter.setRepositories(repositories);
         adapter.notifyDataSetChanged();
         hideSoftKeyboard();

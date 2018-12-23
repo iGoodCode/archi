@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements MainMvpView {
         return this;
     }
 
+
+//
     @Override
     public void showRepositories(List<Repository> repositories) {
         RepositoryAdapter adapter = (RepositoryAdapter) reposRecycleView.getAdapter();
